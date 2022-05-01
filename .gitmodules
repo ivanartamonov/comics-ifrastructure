@@ -1,3 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/ivanartamonov/comics-backend
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/ivanartamonov/comics-frontend.git
