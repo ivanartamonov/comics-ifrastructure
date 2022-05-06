@@ -5,20 +5,39 @@ Current repo is infrustructure for launching backend and frontend together with 
 
 ## How to use
 
-You should clone this repo and after that
+You should clone this repo and enter to the directory
 
 ```
-clone <backend repository> backend
-clone <frontend repository> frontend
-
-docker-compose up -d --build
+git clone https://github.com/ivanartamonov/comics-ifrastructure.git comics
+cd comics
 ```
 
-Docker will build required containers and after that you can open backend & frontend websites with browser by the following adresses:
+Clone git sub-modules
+```
+git submodule update --init
+```
 
-* Backend: http://localhost:8080
-* Frontend http://localhost:8081
+Build docker container
+```
+docker-compose up --build -d
+```
 
-You can change some files in `backend`/`frontend` directoies and check that websites are changing too.
+Install backend dependecies
+```
+docker-compose exec php composer install
+```
+
+Now, you can open backend website by http://localhost:8080
+
+Enter to `frontend` directory and start working with frontend
+```
+cd frontend
+yarn install
+yarn start
+```
+
+Now, you can open frontend app by http://localhost:3000
+
+Tip: you can enter to `backend` or `frontend` directory and switch branch separately in frontend and backend applications.
 
 Have fun!
