@@ -24,7 +24,7 @@ docker-compose up --build -d
 
 Install backend dependecies
 ```
-docker-compose exec comics_php composer install
+docker-compose exec php composer install
 ```
 
 Now, you can open backend website by http://localhost:8080
